@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Light Theme Enhancements */
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+        font-family: 'Arial', sans-serif;
+      }
+
+      form {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: auto;
+      }
+
+      input {
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #3b82f6;
+      }
+
+      button {
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #2563eb;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-800 h-screen w-screen flex items-center justify-center">
+    <form class="w-full max-w-md" action="/register" method="post">
+      <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+          <label
+            for="username"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            User Name
+          </label>
+          <input
+            type="text"
+            id="username"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Enter your username"
+            name="username"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="phone"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="1234567890"
+            pattern="[0-9]{10}"
+            name="phone"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-6">
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          Email Address
+        </label>
+        <input
+          type="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="example@company.com"
+          name="email"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label
+          for="password"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          Password
+        </label>
+        <input
+          type="password"
+          id="password"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="•••••••••"
+          name="password"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label
+          for="confirm_password"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          Confirm Password
+        </label>
+        <input
+          type="password"
+          id="confirm_password"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="•••••••••"
+          name="confirm_password"
+          required
+        />
+      </div>
+      <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+          <input
+            id="terms"
+            type="checkbox"
+            class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+            required
+          />
+        </div>
+        <label
+          for="terms"
+          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >
+          I agree with the
+          <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">
+            terms and conditions
+          </a>.
+        </label>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Register
+      </button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
