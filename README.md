@@ -1,6 +1,3 @@
-Here’s a **formal and simplified version** of the `README.md` for your **DriftBox cloud storage backend**:
-
----
 
 # DriftBox – Cloud Storage Backend
 
